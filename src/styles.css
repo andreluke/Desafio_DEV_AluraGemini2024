@@ -229,7 +229,6 @@ h1:hover {
 }
 
 footer {
-  background-color: #f5f7f81e; /* Cor de fundo do rodapé */
   color: #000; /* Cor do texto */
   text-align: center; /* Alinha o texto ao centro */
   padding: 0; /* Espaçamento interno */
@@ -237,7 +236,22 @@ footer {
   position: absolute; /* Posiciona o rodapé */
   bottom: 0; /* Alinha ao fundo da página */
   font-size: 1rem; /* Tamanho da fonte */
+  border-radius: 8px 8px 0 0 ;
   transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+
+footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b1dbdb   ; /* Cor de fundo do rodapé */
+  opacity: 0.5; /* Reduz a opacidade da imagem de fundo */
+  filter: blur(8px); /* Adiciona o efeito de desfoque */
+  z-index: -1;
 }
 
 footer:hover {
