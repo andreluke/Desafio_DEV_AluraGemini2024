@@ -1,120 +1,68 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-/* Estiliza o corpo da página */
-/* Estiliza o corpo da página */
-body {
-  font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
-  background-color: rgba(221, 221, 221, 1); /* Cor de fundo da página */
-  display: flex; /* Usa Flexbox para layout */
-  flex-direction: column; /* Alinha os itens na vertical */
-  align-items: center; /* Centraliza os itens horizontalmente */
-  justify-content: center; /* Centraliza os itens verticalmente */
-  height: 100vh; /* Preenche a altura total da viewport */
-  margin: 0; /* Remove a margem padrão */
-  padding: 0; /* Remove o padding padrão */
-  position: relative; /* Necessário para o pseudo-elemento funcionar corretamente */
-}
-
-body::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: url("images/teste.png");
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3; /* Reduz a opacidade da imagem de fundo */
-  z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
-}
-
-/* Estiliza os títulos h1 */
-h1 {
-  font-size: 3rem; /* Aumenta o tamanho da fonte */
-  color: #222831; /* Cor do texto */
-  text-align: center; /* Alinha o texto ao centro */
-  letter-spacing: 0.4rem; /* Espaçamento entre letras */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adiciona uma sombra ao texto */
-  margin-bottom: 2rem; /* Espaçamento abaixo do título */
-}
-
-/* Estiliza as seções da página */
-.pesquisa {
-  display: flex; /* Usa Flexbox para layout */
-  flex-direction: column; /* Alinha os itens na vertical */
-  align-items: center; /* Centraliza os itens horizontalmente */
-  margin-bottom: 3rem; /* Espaçamento abaixo de cada seção */
-}
-
-/* Estiliza os inputs dentro das seções */
-.pesquisa input {
-  width: 30rem; /* Largura dos inputs */
-  border: none; /* Remove a borda padrão */
-  padding: 1rem; /* Espaçamento interno */
-  border-radius: 1.5rem; /* Borda arredondada */
-  margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
-  color: #45474b; /* Cor do texto */
-  font-size: 1rem; /* Tamanho da fonte */
-  box-sizing: border-box; /* Inclui padding e border na largura total */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
-  transition: box-shadow 0.3s ease; /* Transição suave na sombra */
-}
-
-.pesquisa input:focus {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais intensa ao focar */
-  outline: none; /* Remove o outline padrão */
-}
-
-/* Estiliza os botões dentro das seções */
-.pesquisa button {
-  padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
-  border: none; /* Remove a borda padrão */
-  border-radius: 1.5rem; /* Borda arredondada */
-  background-color: #30475e; /* Cor de fundo do botão */
-  color: #f5f7f8; /* Cor do texto do botão */
-  font-size: 1rem; /* Tamanho da fonte */
-  cursor: pointer; /* Muda o cursor para indicar que é clicável */
-  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Transições suaves */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra inicial */
-}
-
-/* Adiciona efeito hover ao botão de pesquisa */
-.pesquisa button:hover {
-  background-color: #3b5970; /* Muda a cor de fundo ao passar o mouse */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
-}
 
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
   width: 60rem; /* Largura máxima da caixa de resultados */
-  height: 46vh; /* Altura máxima da caixa de resultados */
+  height: 36vh; /* Altura máxima da caixa de resultados */
   overflow-y: auto; /* Adiciona rolagem vertical se necessário */
   margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
   padding: 1rem; /* Espaçamento interno */
   border-radius: 0.6rem; /* Borda arredondada */
 }
 
+/* Estiliza a barra de rolagem */
+.resultados-pesquisa::-webkit-scrollbar {
+  width: 12px; /* Largura da scrollbar */
+}
+
+/* Estiliza a parte interna da barra de rolagem */
+.resultados-pesquisa::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.5); /* Cor de fundo da track (trilho) */
+  border-radius: 0.6rem; /* Borda arredondada */
+}
+
+/* Estiliza o thumb (indicador de rolagem) */
+.resultados-pesquisa::-webkit-scrollbar-thumb {
+  background-color: #888; /* Cor do thumb */
+  border-radius: 6px; /* Borda arredondada */
+  border: 3px solid rgba(241, 241, 241, 0.5); /* Borda ao redor do thumb para dar espaço */
+}
+
+/* Estiliza o thumb ao passar o mouse */
+.resultados-pesquisa::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cor do thumb ao passar o mouse */
+}
+
 /* Estiliza cada item de resultado */
 .item-resultado {
-  background: #ffffff; /* Cor de fundo dos itens */
+  background: rgba(255, 255, 255, 0.5); /* Cor de fundo dos itens */
   border-radius: 0.6rem; /* Borda arredondada */
   padding: 1rem; /* Espaçamento interno */
   margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  backdrop-filter: blur(8px); /* Aplica o efeito de desfoque no fundo */
+  -webkit-backdrop-filter: blur(8px); /* Suporte para navegadores WebKit */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */ 
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.item-resultado:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
 }
 
 /* Estiliza os títulos dentro dos itens de resultado */
 .item-resultado h2 {
   font-size: 1.5rem; /* Tamanho da fonte */
-  color: #222831; /* Cor do texto */
+  color: #1c2738; /* Cor do texto */
 }
 
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
   text-decoration: none; /* Remove o sublinhado padrão dos links */
   color: #30475e; /* Cor do texto dos links */
+  transition: text-decoration 0.5s ease-in-out;
+  font-weight: bold;
 }
 
 /* Estiliza os links quando são passados o mouse sobre */
@@ -183,12 +131,15 @@ h1:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
   max-width: 35rem; /* Define a largura máxima da caixa */
   margin: auto; /* Centraliza a caixa horizontalmente na página */
-  transition: box-shadow 0.3s ease, border 0.3s ease;
+  transition: box-shadow 0.3s ease, border 0.3s ease, backdrop-filter 0.6s ease; /* Adiciona transição para backdrop-filter */
+  -webkit-transition: box-shadow 0.3s ease, border 0.3s ease, -webkit-backdrop-filter 0.6s ease; /* Suporte para navegadores WebKit */
 }
 
 .pesquisa:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
   border: 1px solid rgba(0, 0, 0, 0.4); /* Escurece a borda ao passar o mouse */
+  backdrop-filter: blur(2px); /* Aplica o efeito de desfoque no fundo */
+  -webkit-backdrop-filter: blur(8px); /* Suporte para navegadores WebKit */
 }
 /* Estiliza os inputs dentro das seções */
 .pesquisa input {
@@ -229,7 +180,7 @@ h1:hover {
 }
 
 footer {
-  color: #000; /* Cor do texto */
+  color: #000;  /* Cor do texto */
   text-align: center; /* Alinha o texto ao centro */
   padding: 0; /* Espaçamento interno */
   width: 100%; /* Largura total da página */
@@ -238,8 +189,9 @@ footer {
   font-size: 1rem; /* Tamanho da fonte */
   border-radius: 8px 8px 0 0 ;
   transition: box-shadow 0.3s ease, border 0.3s ease;
+  backdrop-filter: blur(2px); /* Aplica o efeito de desfoque no fundo */
+  -webkit-backdrop-filter: blur(8px); /* Suporte para navegadores WebKit */
 }
-
 
 footer::before {
   content: "";
@@ -275,8 +227,13 @@ footer:hover {
     height: 40vh; /* Altura da caixa de resultados em telas menores */
   }
 
+  .resultados-pesquisa h2{
+    text-align: center;
+  }
+
   .item-resultado h2 {
     font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+    text-align: center;
   }
 }
 
