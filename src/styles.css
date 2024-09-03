@@ -1,81 +1,6 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
 
-
-/* Estiliza a caixa de resultados da pesquisa */
-.resultados-pesquisa {
-  width: 60rem; /* Largura máxima da caixa de resultados */
-  height: 36vh; /* Altura máxima da caixa de resultados */
-  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
-  margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
-  padding: 1rem; /* Espaçamento interno */
-  border-radius: 0.6rem; /* Borda arredondada */
-}
-
-/* Estiliza a barra de rolagem */
-.resultados-pesquisa::-webkit-scrollbar {
-  width: 12px; /* Largura da scrollbar */
-}
-
-/* Estiliza a parte interna da barra de rolagem */
-.resultados-pesquisa::-webkit-scrollbar-track {
-  background: rgba(241, 241, 241, 0.5); /* Cor de fundo da track (trilho) */
-  border-radius: 0.6rem; /* Borda arredondada */
-}
-
-/* Estiliza o thumb (indicador de rolagem) */
-.resultados-pesquisa::-webkit-scrollbar-thumb {
-  background-color: #888; /* Cor do thumb */
-  border-radius: 6px; /* Borda arredondada */
-  border: 3px solid rgba(241, 241, 241, 0.5); /* Borda ao redor do thumb para dar espaço */
-}
-
-/* Estiliza o thumb ao passar o mouse */
-.resultados-pesquisa::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Cor do thumb ao passar o mouse */
-}
-
-/* Estiliza cada item de resultado */
-.item-resultado {
-  background: rgba(255, 255, 255, 0.5); /* Cor de fundo dos itens */
-  border-radius: 0.6rem; /* Borda arredondada */
-  padding: 1rem; /* Espaçamento interno */
-  margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
-  backdrop-filter: blur(8px); /* Aplica o efeito de desfoque no fundo */
-  -webkit-backdrop-filter: blur(8px); /* Suporte para navegadores WebKit */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */ 
-  transition: box-shadow 0.3s ease, border 0.3s ease;
-}
-
-.item-resultado:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
-}
-
-/* Estiliza os títulos dentro dos itens de resultado */
-.item-resultado h2 {
-  font-size: 1.5rem; /* Tamanho da fonte */
-  color: #1c2738; /* Cor do texto */
-}
-
-/* Estiliza os links dentro dos itens de resultado */
-.item-resultado a {
-  text-decoration: none; /* Remove o sublinhado padrão dos links */
-  color: #30475e; /* Cor do texto dos links */
-  transition: text-decoration 0.5s ease-in-out;
-  font-weight: bold;
-}
-
-/* Estiliza os links quando são passados o mouse sobre */
-.item-resultado a:hover {
-  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
-}
-
-/* Estiliza a descrição meta dentro dos itens de resultado */
-.descricao-meta {
-  color: #45474b; /* Cor do texto */
-  margin: 0.5rem 0; /* Margem acima e abaixo */
-}
-/* Estiliza o corpo da página */
 body {
   font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
   background-color: rgba(221, 221, 221, 1); /* Cor de fundo da página */
@@ -178,6 +103,100 @@ h1:hover {
   background-color: #3b5970; /* Muda a cor de fundo ao passar o mouse */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
 }
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+  width: 60rem; /* Largura máxima da caixa de resultados */
+  height: 36vh; /* Altura máxima da caixa de resultados */
+  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
+  padding: 1rem; /* Espaçamento interno */
+  border-radius: 0.6rem; /* Borda arredondada */
+}
+
+/* Estiliza a barra de rolagem */
+.resultados-pesquisa::-webkit-scrollbar {
+  width: 12px; /* Largura da scrollbar */
+}
+
+/* Estiliza a parte interna da barra de rolagem */
+.resultados-pesquisa::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 0.5); /* Cor de fundo da track (trilho) */
+  border-radius: 0.6rem; /* Borda arredondada */
+}
+
+/* Estiliza o thumb (indicador de rolagem) */
+.resultados-pesquisa::-webkit-scrollbar-thumb {
+  background-color: #888; /* Cor do thumb */
+  border-radius: 6px; /* Borda arredondada */
+  border: 3px solid rgba(241, 241, 241, 0.5); /* Borda ao redor do thumb para dar espaço */
+}
+
+/* Estiliza o thumb ao passar o mouse */
+.resultados-pesquisa::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Cor do thumb ao passar o mouse */
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+  display: flex;
+  justify-content: space-between; /* Espaça o texto e a imagem */
+  align-items: center; /* Alinha verticalmente o conteúdo */
+  margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+  padding: 1rem; /* Espaçamento interno */
+  background: rgba(255, 255, 255, 0.5); /* Cor de fundo dos itens */
+  border-radius: 0.6rem; /* Borda arredondada */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  transition: box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.item-resultado:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+  font-size: 1.5rem; /* Tamanho da fonte */
+  color: #1c2738; /* Cor do texto */
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+  text-decoration: none; /* Remove o sublinhado padrão dos links */
+  color: #30475e; /* Cor do texto dos links */
+  transition: text-decoration 0.5s ease-in-out;
+  font-weight: bold;
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+  text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+  color: #45474b; /* Cor do texto */
+  margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+.texto-item {
+  flex: 2.5; /* O texto ocupa 3 partes do espaço disponível */
+  padding-right: 1rem; /* Espaçamento à direita do texto */
+}
+
+.imagem-item {
+  flex: 1; /* A imagem ocupa 1 parte do espaço disponível */
+  max-width: 150px; /* Limita a largura máxima da imagem */
+}
+
+.imagem-item img:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+.imagem-item img {
+  width: 100%; /* A imagem ocupa toda a largura do container */
+  border-radius: 0.6rem; /* Borda arredondada da imagem */
+}
+
 
 footer {
   color: #000;  /* Cor do texto */
