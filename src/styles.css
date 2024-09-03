@@ -195,6 +195,7 @@ h1:hover {
 .imagem-item img {
   width: 100%; /* A imagem ocupa toda a largura do container */
   border-radius: 0.6rem; /* Borda arredondada da imagem */
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 
