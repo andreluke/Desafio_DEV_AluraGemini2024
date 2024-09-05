@@ -1,11 +1,34 @@
-﻿# Desafio DEV #AluraGemini2024
+# 🚀 Desafio DEV #AluraGemini2024
 
-## Imersao Alura Gemini
-Imersão Alura com Gemini - Setembro 24
+Bem-vindo ao projeto desenvolvido durante a **Imersão Alura Gemini - Setembro 2024**! Este projeto foi criado entre os dias **02/09/24 a 06/09/24**, sob a orientação de especialistas da Alura.
 
-Realizado 02/09/24 a 06/09/24.
+## Link de demonstração:
+https://desafio-dev-alura-gemini2024-and-git-441af6-andrelukes-projects.vercel.app
 
-## Professores
+## 👨‍🏫 Professores
 - Rafaella Ballerini
 - Guilherme Lima
 - Luciano Martins
+
+## 📚 Descrição do Projeto
+
+Este projeto apresenta uma página interativa onde você pode pesquisar **Hashiras e Caçadores** do universo Demon Slayer. Utilizamos **HTML**, **CSS** e **JavaScript** para criar uma interface moderna e com animações suaves, que oferece uma experiência de usuário agradável.
+
+### 🛠️ Tecnologias Utilizadas:
+- **HTML5** para a estruturação da página.
+- **CSS3** para estilização, incluindo animações suaves e responsividade.
+- **JavaScript** para a dinâmica da pesquisa e exibição dos resultados.
+
+### 🎨 Funcionalidades:
+- Pesquisa interativa com animações suaves.
+- Resultados organizados com layout responsivo.
+- Design moderno e minimalista.
+
+## 📸 Visual
+
+Aqui estão alguns exemplos visuais do projeto:
+
+
+---
+
+Desenvolvido com 💻 por [Seu Nome](https://github.com/andreluke).
