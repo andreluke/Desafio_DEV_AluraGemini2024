@@ -1,5 +1,6 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
 
 body {
   font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
@@ -30,6 +31,7 @@ body::before {
 
 /* Estiliza os títulos h1 */
 h1 {
+  font-family: "Cinzel Decorative";
   font-size: 3rem; /* Aumenta o tamanho da fonte */
   color: #2c4975; /* Cor do texto */
   text-align: center; /* Alinha o texto ao centro */
@@ -108,10 +110,11 @@ h1:hover {
 .resultados-pesquisa {
   width: 60rem; /* Largura máxima da caixa de resultados */
   height: 36vh; /* Altura máxima da caixa de resultados */
-  overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+  
   margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
   padding: 1rem; /* Espaçamento interno */
   border-radius: 0.6rem; /* Borda arredondada */
+  overflow-x: hidden; /* Oculta a rolagem horizontal */
 }
 
 /* Estiliza a barra de rolagem */
@@ -137,6 +140,24 @@ h1:hover {
   background-color: #555; /* Cor do thumb ao passar o mouse */
 }
 
+@keyframes slide-in-smooth {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+    filter: blur(10px); /* Desfoque inicial */
+  }
+  60% {
+    transform: translateX(10%);
+    opacity: 0.7;
+    filter: blur(3px); /* Reduz o desfoque */
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0); /* Remove o desfoque completamente */
+  }
+}
+
 /* Estiliza cada item de resultado */
 .item-resultado {
   display: flex;
@@ -148,6 +169,9 @@ h1:hover {
   border-radius: 0.6rem; /* Borda arredondada */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
   transition: box-shadow 0.3s ease, border 0.3s ease;
+  animation: slide-in-smooth 1s cubic-bezier(0.33, 1, 0.68, 1) forwards; /* Transição suave */
+  opacity: 0; /* Garante que comece invisível */
+  transform: translateX(-50%); /* Posição inicial fora da tela */
 }
 
 .item-resultado:hover {
