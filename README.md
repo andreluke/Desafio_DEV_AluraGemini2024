@@ -2,7 +2,8 @@
 
 Bem-vindo ao projeto desenvolvido durante a **Imersão Alura Gemini - Setembro 2024**! Este projeto foi criado entre os dias **02/09/24 a 06/09/24**, sob a orientação de especialistas da Alura.
 
-## Link de demonstração:
+## 📸 Visual:
+Aqui um link aonde voce pode clicar e interagir com o próprio site!
 https://desafio-dev-alura-gemini2024-and-git-441af6-andrelukes-projects.vercel.app
 
 ## 👨‍🏫 Professores
@@ -23,11 +24,6 @@ Este projeto apresenta uma página interativa onde você pode pesquisar **Hashir
 - Pesquisa interativa com animações suaves.
 - Resultados organizados com layout responsivo.
 - Design moderno e minimalista.
-
-## 📸 Visual
-
-Aqui estão alguns exemplos visuais do projeto:
-
 
 ---
 
