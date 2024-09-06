@@ -27,4 +27,4 @@ Este projeto apresenta uma página interativa onde você pode pesquisar **Hashir
 
 ---
 
-Desenvolvido com 💻 por [Seu Nome](https://github.com/andreluke).
+Desenvolvido com 💻 por [André Lucas](https://github.com/andreluke).
