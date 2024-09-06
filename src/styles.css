@@ -1,6 +1,6 @@
 /* Importa a fonte Chakra Petch do Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&display=swap");
 
 body {
   font-family: "Chakra Petch", sans-serif; /* Define a fonte padrão */
@@ -59,7 +59,8 @@ h1:hover {
   max-width: 35rem; /* Define a largura máxima da caixa */
   margin: auto; /* Centraliza a caixa horizontalmente na página */
   transition: box-shadow 0.3s ease, border 0.3s ease, backdrop-filter 0.6s ease; /* Adiciona transição para backdrop-filter */
-  -webkit-transition: box-shadow 0.3s ease, border 0.3s ease, -webkit-backdrop-filter 0.6s ease; /* Suporte para navegadores WebKit */
+  -webkit-transition: box-shadow 0.3s ease, border 0.3s ease,
+    -webkit-backdrop-filter 0.6s ease; /* Suporte para navegadores WebKit */
 }
 
 .pesquisa:hover {
@@ -87,6 +88,12 @@ h1:hover {
   outline: none; /* Remove o outline padrão */
 }
 
+.botoes {
+  display: flex;
+  flex-direction: row;
+  gap: 3vh;
+}
+
 /* Estiliza os botões dentro das seções */
 .pesquisa button {
   padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
@@ -109,8 +116,8 @@ h1:hover {
 /* Estiliza a caixa de resultados da pesquisa */
 .resultados-pesquisa {
   width: 60rem; /* Largura máxima da caixa de resultados */
-  height: 36vh; /* Altura máxima da caixa de resultados */
-  
+  height: 40vh; /* Altura máxima da caixa de resultados */
+
   margin-top: 1rem; /* Espaçamento acima da caixa de resultados */
   padding: 1rem; /* Espaçamento interno */
   border-radius: 0.6rem; /* Borda arredondada */
@@ -182,7 +189,13 @@ h1:hover {
 .item-resultado h2 {
   font-size: 1.5rem; /* Tamanho da fonte */
   color: #1c2738; /* Cor do texto */
+  transition: color 0.3s ease, text-shadow 0.3s ease;
 }
+
+.item-resultado h2:hover {
+  color: #1b2f4b; /* Muda a cor do texto ao passar o mouse */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Aumenta a sombra do texto */
+} 
 
 /* Estiliza os links dentro dos itens de resultado */
 .item-resultado a {
@@ -222,16 +235,15 @@ h1:hover {
   transition: box-shadow 0.3s ease-in-out;
 }
 
-
 footer {
-  color: #000;  /* Cor do texto */
+  color: #000; /* Cor do texto */
   text-align: center; /* Alinha o texto ao centro */
   padding: 0; /* Espaçamento interno */
   width: 100%; /* Largura total da página */
   position: absolute; /* Posiciona o rodapé */
   bottom: 0; /* Alinha ao fundo da página */
   font-size: 1rem; /* Tamanho da fonte */
-  border-radius: 8px 8px 0 0 ;
+  border-radius: 8px 8px 0 0;
   transition: box-shadow 0.3s ease, border 0.3s ease;
   backdrop-filter: blur(2px); /* Aplica o efeito de desfoque no fundo */
   -webkit-backdrop-filter: blur(8px); /* Suporte para navegadores WebKit */
@@ -244,7 +256,7 @@ footer::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #b1dbdb   ; /* Cor de fundo do rodapé */
+  background-color: #b1dbdb; /* Cor de fundo do rodapé */
   opacity: 0.5; /* Reduz a opacidade da imagem de fundo */
   filter: blur(8px); /* Adiciona o efeito de desfoque */
   z-index: -1;
@@ -253,6 +265,47 @@ footer::before {
 footer:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* Aumenta a sombra ao passar o mouse */
   border: 1px 0 0 0 solid rgba(0, 0, 0, 0.4); /* Escurece a borda ao passar o mouse */
+}
+.popup {
+  display: none; /* Escondido por padrão */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fundo semitransparente */
+  opacity: 0;
+  transition: opacity 0.5s ease; /* Transição suave para o popup aparecer */
+  z-index: 10;
+  
+}
+
+.popup.show {
+  display: block; /* Exibe o popup */
+  opacity: 1; /* Aumenta a opacidade de forma suave */
+}
+
+.popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  border-radius: 8px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -271,7 +324,7 @@ footer:hover {
     height: 40vh; /* Altura da caixa de resultados em telas menores */
   }
 
-  .resultados-pesquisa h2{
+  .resultados-pesquisa h2 {
     text-align: center;
   }
 

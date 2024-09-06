@@ -11,9 +11,19 @@
       <h1>Hashiras e caçadores</h1>
     </header>
     <main>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" onclick="fecharPopup()">&times;</span>
+          <h2>Sem resultados encontrados!</h2>
+          <p>Tente pesquisar novamente! Há 9 Hashiras, você pode encontrá-los pesquisando por seus nomes!</p>
+        </div>
+      </div>
       <section class="pesquisa">
-        <input type="text" placeholder="Digite o nome do Hashira" />
+        <input type="text" placeholder="Digite o nome do Hashira" id="campo-pesquisa"/>
+        <div class="botoes">
         <button onclick="pesquisar()">Pesquise aqui</button>
+        <button onclick="sorte()">Estou com sorte!</button>
+      </div>
       </section>
       <section class="resultados-pesquisa" id="resultados-pesquisa">
       
